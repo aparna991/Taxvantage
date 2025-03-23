@@ -28,7 +28,7 @@ const UpcomingTaxes = () => {
               <div className="description">Q4 Estimated Tax Payments</div>
               <div className="installment-info">Federal - 4/4 installments</div>
             </td>
-            <td className="amount">¥97,144.00</td>
+            <td className="amount">₹97,144.00</td>
             <td>
               <button className="pay-now-btn">Pay now</button>
             </td>
@@ -44,7 +44,7 @@ const UpcomingTaxes = () => {
               <div className="description">Self-Employment Tax</div>
               <div className="installment-info">Social Security & Medicare</div>
             </td>
-            <td className="amount">¥69,823.00</td>
+            <td className="amount">₹69,823.00</td>
             <td>
               <button className="pay-now-btn">Pay now</button>
             </td>
@@ -60,7 +60,7 @@ const UpcomingTaxes = () => {
               <div className="description">State Income Tax</div>
               <div className="installment-info">Q4 Payment</div>
             </td>
-            <td className="amount">¥35,126.00</td>
+            <td className="amount">₹35,126.00</td>
             <td>
               <button className="pay-now-btn">Pay now</button>
             </td>
@@ -76,7 +76,7 @@ const UpcomingTaxes = () => {
               <div className="description">Annual Tax Filings</div>
               <div className="installment-info">Federal Form 1040</div>
             </td>
-            <td className="amount">¥1,36,380.00</td>
+            <td className="amount">₹1,36,380.00</td>
             <td>
               <button className="pay-now-btn">Pay now</button>
             </td>

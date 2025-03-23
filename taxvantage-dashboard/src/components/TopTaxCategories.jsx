@@ -12,7 +12,7 @@ const TopTaxCategories = () => {
             </div>
             <div className="supplier-name">Federal Income Tax</div>
           </div>
-          <div className="supplier-amount">¥6,15,888</div>
+          <div className="supplier-amount">₹6,15,888</div>
         </div>
         <div className="supplier-item">
           <div className="supplier-info">
@@ -21,7 +21,7 @@ const TopTaxCategories = () => {
             </div>
             <div className="supplier-name">Self-Employment Tax</div>
           </div>
-          <div className="supplier-amount">¥2,71,208</div>
+          <div className="supplier-amount">₹2,71,208</div>
         </div>
         <div className="supplier-item">
           <div className="supplier-info">
@@ -30,7 +30,7 @@ const TopTaxCategories = () => {
             </div>
             <div className="supplier-name">State Income Tax</div>
           </div>
-          <div className="supplier-amount">¥1,51,248</div>
+          <div className="supplier-amount">₹1,51,248</div>
         </div>
       </div>
     </div>

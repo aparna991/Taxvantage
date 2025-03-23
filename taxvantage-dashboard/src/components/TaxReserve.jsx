@@ -4,7 +4,7 @@ const TaxReserve = () => {
   return (
     <div className="card float-balance">
       <div className="card-title">Tax Reserve Balance</div>
-      <div className="balance-amount">¥4,75,375</div>
+      <div className="balance-amount">₹4,75,375</div>
       <div className="balance-limit">₹8,30,000 target</div>
       <div className="progress-bar">
         <div className="progress-fill" style={{ width: '57%' }}></div>
@@ -13,7 +13,7 @@ const TaxReserve = () => {
       <div style={{ marginTop: '30px' }} className="card-title">
         2023 Tax Payment Status
       </div>
-      <div className="payout-amount">¥4,10,525</div>
+      <div className="payout-amount">₹4,10,525</div>
       <div className="payout-comparison">of ₹7,15,375 estimated annual tax</div>
 
       <div className="graph-container" style={{ height: '80px', marginTop: '10px' }}>
