@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.jpg';
 
 const Sidebar = () => {
   return (
@@ -27,10 +27,7 @@ const Sidebar = () => {
           <span className="nav-icon"></span>
           Reports
         </Link>
-        <Link to="/pay-taxes" className="nav-item">
-          <span className="nav-icon"></span>
-          Pay Taxes
-        </Link>
+
         <Link to="/invoices" className="nav-item">
           <span className="nav-icon"></span>
           Invoices

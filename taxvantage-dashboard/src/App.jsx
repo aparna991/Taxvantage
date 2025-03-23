@@ -11,6 +11,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import ClientPage from './components/ClientPage';
 import ReportPage from './components/ReportPage';
+
 import './App.css';
 
 // Dashboard Component
