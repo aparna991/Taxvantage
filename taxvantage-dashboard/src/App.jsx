@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import TaxSummary from './components/TaxSummary';
@@ -9,9 +9,11 @@ import UpcomingTaxes from './components/UpcomingTaxes';
 import TopTaxCategories from './components/TopTaxCategories';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import ClientPage from './components/ClientPage';
+import ReportPage from './components/ReportPage';
 import './App.css';
 
-// Dashboard Component (Extracted for better organization)
+// Dashboard Component
 const Dashboard = ({ isAuthenticated, setIsAuthenticated }) => {
   return (
     <div className="dashboard">
@@ -58,7 +60,7 @@ const App = () => {
         />
         <Route path="/signup" element={<Signup />} />
 
-        {/* Protected Route */}
+        {/* Protected Routes */}
         <Route
           path="/dashboard"
           element={
@@ -67,6 +69,38 @@ const App = () => {
                 isAuthenticated={isAuthenticated}
                 setIsAuthenticated={setIsAuthenticated}
               />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/clients"
+          element={
+            isAuthenticated ? (
+              <div className="dashboard">
+                <Sidebar />
+                <div className="main-content">
+                  <Header isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
+                  <ClientPage />
+                </div>
+              </div>
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/reports"
+          element={
+            isAuthenticated ? (
+              <div className="dashboard">
+                <Sidebar />
+                <div className="main-content">
+                  <Header isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
+                  <ReportPage />
+                </div>
+              </div>
             ) : (
               <Navigate to="/login" />
             )
