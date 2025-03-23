@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from '../assets/logo.jpg';
+import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const Sidebar = () => {
   return (
@@ -14,35 +15,35 @@ const Sidebar = () => {
         <input type="text" className="search-box" placeholder="Search..." />
       </div>
       <div className="nav-links">
-        <a href="#" className="nav-item active">
+        <Link to="/dashboard" className="nav-item">
           <span className="nav-icon"></span>
           Home
-        </a>
-        <a href="#" className="nav-item">
-          <span className="nav-icon"></span>
-          Pay Taxes
-        </a>
-        <a href="#" className="nav-item">
-          <span className="nav-icon"></span>
-          Invoices
-        </a>
-        <a href="#" className="nav-item">
-          <span className="nav-icon"></span>
-          Reports
-        </a>
-        <a href="#" className="nav-item">
+        </Link>
+        <Link to="/clients" className="nav-item">
           <span className="nav-icon"></span>
           Clients
-        </a>
-        <a href="#" className="nav-item">
+        </Link>
+        <Link to="/reports" className="nav-item">
+          <span className="nav-icon"></span>
+          Reports
+        </Link>
+        <Link to="/pay-taxes" className="nav-item">
+          <span className="nav-icon"></span>
+          Pay Taxes
+        </Link>
+        <Link to="/invoices" className="nav-item">
+          <span className="nav-icon"></span>
+          Invoices
+        </Link>
+        <Link to="/support" className="nav-item">
           <span className="nav-icon"></span>
           Support
-        </a>
-        <a href="#" className="nav-item">
+        </Link>
+        <Link to="/notifications" className="nav-item">
           <span className="nav-icon"></span>
           Notifications
           <span className="notification-badge">3</span>
-        </a>
+        </Link>
       </div>
       <div className="user-profile">
         <div className="avatar">TV</div>
