@@ -496,3 +496,275 @@ body {
     display: none;
   }
 }
+/* Auth Container */
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Error Message */
+.auth-error {
+  color: var(--danger);
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255, 82, 82, 0.1);
+  border-radius: 6px;
+  border: 1px solid var(--danger);
+}
+
+/* Form Inputs */
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-dark);
+  transition: border-color 0.3s ease;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(124, 93, 250, 0.1);
+}
+
+/* Form Labels */
+.auth-form label {
+  font-size: 14px;
+  color: var(--text-dark);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Submit Button */
+.auth-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-form button:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.auth-form button:active {
+  transform: translateY(0);
+}
+
+/* Link to Switch Between Login and Signup */
+.auth-switch {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.auth-switch a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.auth-switch a:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
+
+/* Back to Home Button */
+.auth-home-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.auth-home-button button {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-home-button button:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.auth-home-button button:active {
+  transform: translateY(0);
+}
+/* Auth Container */
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Error Message */
+.auth-error {
+  color: var(--danger);
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255, 82, 82, 0.1);
+  border-radius: 6px;
+  border: 1px solid var(--danger);
+}
+
+/* Form Inputs */
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-dark);
+  transition: border-color 0.3s ease;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(124, 93, 250, 0.1);
+}
+
+/* Form Labels */
+.auth-form label {
+  font-size: 14px;
+  color: var(--text-dark);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Submit Button */
+.auth-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-form button:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.auth-form button:active {
+  transform: translateY(0);
+}
+
+/* Link to Switch Between Login and Signup */
+.auth-switch {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.auth-switch a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.auth-switch a:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
+
+/* Back to Home Button */
+.auth-home-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.auth-home-button button {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-home-button button:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.auth-home-button button:active {
+  transform: translateY(0);
+}
+/* Center the auth container */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  background-color: var(--light); /* Use your app's background color */
+}
+
+/* Auth Container */
+.auth-container {
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
