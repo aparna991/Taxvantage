@@ -1,12 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ isAuthenticated, setIsAuthenticated }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem('isAuthenticated'); // Clear authentication status
-    navigate('/login'); // Redirect to the login page
+    // Clear authentication status
+    localStorage.removeItem('isAuthenticated');
+    setIsAuthenticated(false);
+
+    // Redirect to login page
+    navigate('/login');
   };
 
   return (
@@ -16,20 +20,7 @@ const Header = () => {
         1 Jan 2024 - 31 Dec 2024
         <span style={{ marginLeft: '10px' }}>▼</span>
       </div>
-      <button
-        onClick={handleLogout}
-        style={{
-          marginLeft: '20px',
-          padding: '8px 16px',
-          backgroundColor: '#ff5252',
-          color: 'white',
-          border: 'none',
-          borderRadius: '4px',
-          cursor: 'pointer',
-        }}
-      >
-        Logout
-      </button>
+      {isAuthenticated && <button onClick={handleLogout}>Logout</button>}
     </div>
   );
 };
