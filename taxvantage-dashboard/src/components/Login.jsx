@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase'; // Import Firebase auth
 
 const Login = ({ setIsAuthenticated }) => {
   const [email, setEmail] = useState('');
@@ -8,10 +10,14 @@ const Login = ({ setIsAuthenticated }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    // Simulate login logic (replace with actual API call)
-    if (email && password) {
+    setError(''); // Clear any previous errors
+
+    try {
+      // Sign in with Firebase
+      await signInWithEmailAndPassword(auth, email, password);
+
       // Set authentication status
       localStorage.setItem('isAuthenticated', 'true');
       setIsAuthenticated(true);
@@ -19,8 +25,9 @@ const Login = ({ setIsAuthenticated }) => {
       // Redirect to the previous page or dashboard
       const from = location.state?.from?.pathname || '/dashboard';
       navigate(from, { replace: true });
-    } else {
-      setError('Please enter email and password');
+    } catch (error) {
+      // Handle errors
+      setError(error.message);
     }
   };
 

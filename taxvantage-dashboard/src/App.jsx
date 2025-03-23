@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from './firebase'; // Import Firebase auth
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import TaxSummary from './components/TaxSummary';
@@ -11,7 +13,6 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import ClientPage from './components/ClientPage';
 import ReportPage from './components/ReportPage';
-
 import './App.css';
 
 // Dashboard Component
@@ -37,18 +38,24 @@ const Dashboard = ({ isAuthenticated, setIsAuthenticated }) => {
 };
 
 const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(
-    localStorage.getItem('isAuthenticated') === 'true'
-  );
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // Update authentication status when localStorage changes
+  // Listen for Firebase authentication state changes
   useEffect(() => {
-    const handleStorageChange = () => {
-      setIsAuthenticated(localStorage.getItem('isAuthenticated') === 'true');
-    };
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in
+        setIsAuthenticated(true);
+        localStorage.setItem('isAuthenticated', 'true');
+      } else {
+        // User is signed out
+        setIsAuthenticated(false);
+        localStorage.removeItem('isAuthenticated');
+      }
+    });
 
-    window.addEventListener('storage', handleStorageChange);
-    return () => window.removeEventListener('storage', handleStorageChange);
+    // Cleanup subscription on unmount
+    return () => unsubscribe();
   }, []);
 
   return (
